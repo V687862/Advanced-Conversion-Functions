@@ -9,32 +9,36 @@ Consult documentation on how to utilize the following methods:
 
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
-  // Your code here 
+
+const number = parseInt(blob.substring(2), 2)
+
+return `0x` + number.toString(16)
+
 }
 
 /* Base 16 to base 2 */
 function hexadecimalToBinary(blob) {
-  // Your code here 
+  const number = parseInt(blob.substring(2), 16)
+
+return `0b` + number.toString(2)
 }
 
 /* Base 10 to ASCII */
-function decimalToAscii(blob) {
-  // Your code here 
-}
+const decimalToAscii = (blob) => String.fromCharCode(blob)
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
-  // Your code here 
+  // Your code here
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
-  // Your code here 
+  // Your code here
 }
 
 /* ASCII to base 10 */
 function asciiToDecimal(blob) {
-  // Your code here 
+  // Your code here
 }
 
 // console.log('Binary to hexadecimal:')
