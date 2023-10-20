@@ -24,22 +24,19 @@ return `0b` + number.toString(2)
 }
 
 /* Base 10 to ASCII */
-const decimalToAscii = (blob) => String.fromCharCode(blob)
+const decimalToAscii = (blob) => String.fromCharCode(blob);
 
 /* Base 2 to ASCII */
-function binaryToAscii(blob) {
-  // Your code here
-}
+const binaryToAscii = (blob) => String.fromCharCode(parseInt(blob.substring(2), 2));
+  
 
 /* Base 16 to ASCII */
-function hexadecimalToAscii(blob) {
-  // Your code here
-}
-
+const hexadecimalToAscii = (blob) => String.fromCharCode(parseInt(blob.substring(2), 16));
+ 
 /* ASCII to base 10 */
-function asciiToDecimal(blob) {
-  // Your code here
-}
+// const asciiToDecimal = (blob) => Array.from(blob).map(char => char.charCodeAt(0));
+
+const asciiToDecimal = (blob) => (blob).split('').map(char => char.charCodeAt(0));
 
 // console.log('Binary to hexadecimal:')
 // console.log(binaryToHexadecimal('0b1010')) // '0xa'
